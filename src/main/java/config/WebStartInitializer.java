@@ -1,22 +1,23 @@
 package config;
 
-import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
-
-public class WebStartInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
-  
-  @Override
-  protected Class<?>[] getRootConfigClasses() {
-    return new Class<?>[] { RootConfig.class };
-  }
-
-  @Override
-  protected Class<?>[] getServletConfigClasses() {
-    return new Class<?>[] { WebConfig.class };
-  }
-
-  @Override
-  protected String[] getServletMappings() {
-    return new String[] { "/" };
-  }
-
-}
+// commented below with web.xml approach
+//import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+//
+//public class WebStartInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+//
+//  @Override
+//  protected Class<?>[] getRootConfigClasses() {
+//    return new Class<?>[] { RootConfig.class };
+//  }
+//
+//  @Override
+//  protected Class<?>[] getServletConfigClasses() {
+//    return new Class<?>[] { WebConfig.class };
+//  }
+//
+//  @Override
+//  protected String[] getServletMappings() {
+//    return new String[] { "/" };
+//  }
+//
+//}
