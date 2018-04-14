@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-//import Spittle;
-//import spittr.data.SpittleRepository;
+import web.Spittle;
+import data.SpittleRepository;
 
 @Controller
 @RequestMapping("/spittles")
@@ -21,11 +21,11 @@ public class SpittleController {
 
   private static final String MAX_LONG_AS_STRING = "9223372036854775807";
   
-//  private SpittleRepository spittleRepository;
+  private SpittleRepository spittleRepository;
 
-//  @Autowired
-  public SpittleController() {  //SpittleRepository spittleRepository
-   // this.spittleRepository = spittleRepository;
+  @Autowired
+  public SpittleController(SpittleRepository spittleRepository) {  //SpittleRepository spittleRepository
+    this.spittleRepository = spittleRepository;
   }
 
   @RequestMapping(method=RequestMethod.GET)

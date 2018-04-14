@@ -4,7 +4,9 @@ import static org.springframework.web.bind.annotation.RequestMethod.*;
 
 import javax.validation.Valid;
 
+import data.SpitterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -19,11 +21,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/spitter")
 public class SpitterController {
 
-  //private SpitterRepository spitterRepository;
+  private SpitterRepository spitterRepository;
 
-//  @Autowired
-  public SpitterController() {   // SpitterRepository spitterRepository
-   // this.spitterRepository = spitterRepository;
+
+  @Autowired
+  public SpitterController(/*@Qualifier("jdbcSpitterRepository")*/SpitterRepository spitterRepository) {   // SpitterRepository spitterRepository
+    this.spitterRepository = spitterRepository;
   }
   
 //  @ModelAttribute
