@@ -13,14 +13,14 @@ import config.RootConfig.WebPackage;
 
 @Configuration
 @Import(DataConfig.class)
-@ComponentScan(basePackages={"web, data"},
+@ComponentScan(basePackages={"web, data, config"},
     excludeFilters={
         @Filter(type=FilterType.CUSTOM, value= RootConfig.WebPackage.class)
     })
 public class RootConfig {
   public static class WebPackage extends RegexPatternTypeFilter {
     public WebPackage() {
-      super(Pattern.compile("spittr\\.web"));
+      super(Pattern.compile("\\.web"));
     }    
   }
 }
