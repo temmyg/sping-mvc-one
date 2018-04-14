@@ -1,4 +1,4 @@
-package web.config;
+package config;
 
 import java.util.regex.Pattern;
 
@@ -9,7 +9,7 @@ import org.springframework.context.annotation.FilterType;
 import org.springframework.context.annotation.Import;
 import org.springframework.core.type.filter.RegexPatternTypeFilter;
 
-import web.config.RootConfig.WebPackage;
+import config.RootConfig.WebPackage;
 
 @Configuration
 @Import(DataConfig.class)

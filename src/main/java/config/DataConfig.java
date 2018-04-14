@@ -1,4 +1,4 @@
-package web.config;
+package config;
 
 import javax.sql.DataSource;
 
