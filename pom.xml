@@ -49,19 +49,6 @@
                     <path>/</path>
                     <port>9090</port>
                 </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.apache.tomcat</groupId>
-                        <artifactId>tomcat-el-api</artifactId>
-                        <version>${tomcat7Version}</version>
-                        <exclusions>
-                            <exclusion>
-                                <groupId>javax.el</groupId>
-                                <artifactId>javax.el-api</artifactId>
-                            </exclusion>
-                        </exclusions>
-                    </dependency>
-                </dependencies>
             </plugin>
         </plugins>
     </build>
